@@ -16,6 +16,7 @@ C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\li
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\librdkafka\x64\vcruntime140.dll
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\librdkafka\x64\zlib1.dll
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\librdkafka\x64\zstd.dll
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\NLog.config
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\PhoneCallWriterWinService.exe.config
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\PhoneCallWriterWinService.exe
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\PhoneCallWriterWinService.pdb
@@ -36,4 +37,3 @@ C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\Ph
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCal.F8D743FF.Up2Date
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.exe
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.pdb
-C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\NLog.config

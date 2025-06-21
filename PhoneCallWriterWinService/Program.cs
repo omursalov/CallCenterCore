@@ -12,7 +12,7 @@ namespace PhoneCallWriterWinService
         public static void Main()
         {
 #if DEBUG
-            // Тестирование 
+            // Тестирование в режиме DEBUG
             var kafkaProducer = new KafkaProducer();
             for (var i = 0; i < 100; i++)
                 kafkaProducer.Write(Guid.NewGuid().ToString());
@@ -20,7 +20,7 @@ namespace PhoneCallWriterWinService
 #else
             ServiceBase.Run(new ServiceBase[]
             {
-                new CrmCallsKafkaWriter()
+                new WinService()
             });
 #endif
         }

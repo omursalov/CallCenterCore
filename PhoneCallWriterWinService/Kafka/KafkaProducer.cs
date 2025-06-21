@@ -2,6 +2,7 @@
 using NLog;
 using System;
 using System.Configuration;
+using System.IO;
 
 namespace PhoneCallWriterWinService.Kafka
 {
@@ -11,7 +12,7 @@ namespace PhoneCallWriterWinService.Kafka
 
         private readonly ProducerConfig _config = new ProducerConfig
         {
-            BootstrapServers = ConfigurationManager.AppSettings["BootstrapServers"].ToString()
+            BootstrapServers = ConfigurationManager.AppSettings["BootstrapServers"]
         };
 
         private const int FLUSH_SEC = 2;
@@ -24,13 +25,16 @@ namespace PhoneCallWriterWinService.Kafka
             {
                 _producer = new ProducerBuilder<Null, string>(_config).Build();
             }
-            catch (Exception ex)
+            catch (DllNotFoundException)
             {
-                _logger.Error(ex);
-            }
-            finally
-            {
-                Dispose();
+                if (!Library.IsLoaded)
+                {
+                    var pathToLibrd = System.IO.Path.Combine(
+                        Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                        $"librdkafka\\x86\\librdkafka.dll");
+                    Library.Load(pathToLibrd);
+                    _producer = new ProducerBuilder<Null, string>(_config).Build();
+                }
             }
         }
 
@@ -38,13 +42,7 @@ namespace PhoneCallWriterWinService.Kafka
         {
             try
             {
-                _producer.Produce(_topicName, new Message<Null, string> { Value = message }, (dr) =>
-                {
-                    if (dr.Error.Code == ErrorCode.NoError)
-                        _logger.Info($"Записана строка '{dr.Value}' в топик '{dr.Topic}'");
-                    else
-                        _logger.Error($"Ошибка отправки строки '{dr.Value}' в топик '{dr.Topic}': {dr.Error.Reason}");
-                });
+                var x = _producer.ProduceAsync(_topicName, new Message<Null, string> { Value = message }).Result;
             }
             catch (Exception ex)
             {
@@ -56,9 +54,6 @@ namespace PhoneCallWriterWinService.Kafka
             }
         }
 
-        public void Dispose()
-        {
-            _producer.Dispose();
-        }
+        public void Dispose() => _producer.Dispose();
     }
 }

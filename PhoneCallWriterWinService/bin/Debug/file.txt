@@ -1,7 +1,0 @@
-2025-06-21 23:15:19.0457|ERROR|PhoneCallWriterWinService.Kafka.KafkaProducer|System.DllNotFoundException: Failed to load the librdkafka native library.
-   в Confluent.Kafka.Impl.Librdkafka.TrySetDelegates(List`1 nativeMethodCandidateTypes)
-   в Confluent.Kafka.Impl.Librdkafka.LoadNetStandardDelegates(String userSpecifiedPath)
-   в Confluent.Kafka.Impl.Librdkafka.Initialize(String userSpecifiedPath)
-   в Confluent.Kafka.Producer`2..ctor(ProducerBuilder`2 builder)
-   в Confluent.Kafka.ProducerBuilder`2.Build()
-   в PhoneCallWriterWinService.Kafka.KafkaProducer..ctor() в C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\Kafka\KafkaProducer.cs:строка 25
