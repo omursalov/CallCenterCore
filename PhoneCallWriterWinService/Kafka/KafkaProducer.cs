@@ -20,7 +20,18 @@ namespace PhoneCallWriterWinService.Kafka
 
         public KafkaProducer()
         {
-            _producer = new ProducerBuilder<Null, string>(_config).Build();
+            try
+            {
+                _producer = new ProducerBuilder<Null, string>(_config).Build();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+            }
+            finally
+            {
+                Dispose();
+            }
         }
 
         public void Write(string message)
@@ -35,7 +46,7 @@ namespace PhoneCallWriterWinService.Kafka
                         _logger.Error($"Ошибка отправки строки '{dr.Value}' в топик '{dr.Topic}': {dr.Error.Reason}");
                 });
             }
-            catch (ProduceException<Null, string> ex)
+            catch (Exception ex)
             {
                 _logger.Error(ex);
             }

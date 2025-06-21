@@ -36,3 +36,4 @@ C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\Ph
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCal.F8D743FF.Up2Date
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.exe
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.pdb
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\NLog.config
