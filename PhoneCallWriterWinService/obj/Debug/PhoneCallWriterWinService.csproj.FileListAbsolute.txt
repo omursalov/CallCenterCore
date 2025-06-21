@@ -1,0 +1,2 @@
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.csproj.CoreCompileInputs.cache

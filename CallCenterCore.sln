@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{52653692-D0D9-4594-B24B-234BB8E46E15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneCallWriterWinService", "PhoneCallWriterWinService\PhoneCallWriterWinService.csproj", "{0717C511-BC64-4B2C-AEAB-889A0E1DC304}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52653692-D0D9-4594-B24B-234BB8E46E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52653692-D0D9-4594-B24B-234BB8E46E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52653692-D0D9-4594-B24B-234BB8E46E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52653692-D0D9-4594-B24B-234BB8E46E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0717C511-BC64-4B2C-AEAB-889A0E1DC304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0717C511-BC64-4B2C-AEAB-889A0E1DC304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0717C511-BC64-4B2C-AEAB-889A0E1DC304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0717C511-BC64-4B2C-AEAB-889A0E1DC304}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {410E3E48-096E-412D-ACB2-BB45751A23CE}
+	EndGlobalSection
+EndGlobal
