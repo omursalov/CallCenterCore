@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenerateCallClientsDataConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6f2f93fe75a66d30ca679e3ce9dc70f378f9bb6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd312a2408e740f8ca371d6e046cfc107a2dab1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenerateCallClientsDataConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenerateCallClientsDataConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

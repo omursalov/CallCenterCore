@@ -2,6 +2,14 @@
 using GenerateCallClientsDataConsole;
 using Microsoft.Xrm.Sdk;
 using System.Configuration;
+using System.Net.Security;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+
+// В будущем нужен норм SSL сертификат, пока так (для теста)
+ServicePointManager.ServerCertificateValidationCallback =
+   delegate (object sender, X509Certificate certificate, X509Chain chain,
+       SslPolicyErrors sslPolicyErrors) { return true; };
 
 var crmClient = new OnPremiseClient(
     ConfigurationManager.AppSettings["CrmOrgServiceUrl"],
@@ -23,11 +31,12 @@ for (var i = 0; i < 5; i++)
         }
     });
 
+    Console.WriteLine($"Создан обзвон {callingContactsEntityId}");
+
     // Создадим контактов
-    var contactIds = new List<Guid>();
     for (var j = 0; j < 500; j++)
     {
-        contactIds.Add(crmClient.Create(new Entity
+        var contactId = crmClient.Create(new Entity
         {
             LogicalName = "contact",
             Attributes =
@@ -37,21 +46,20 @@ for (var i = 0; i < 5; i++)
                 { "middlename", "" },
                 { "mobilephone", $"+7{CommonHelper.RandomDigits(10)}" }
             }
-        }));
-    }
+        });
 
-    foreach (var contactId in contactIds)
-    {
-        var party1 = new[] 
-        { 
-            new Entity 
-            { 
+        Console.WriteLine($"Создан контакт {contactId}");
+
+        var party1 = new[]
+        {
+            new Entity
+            {
                 LogicalName = "activityparty",
                 Attributes =
                 {
                     { "partyid", new EntityReference("systemuserid", crmClient.CallerId) }
                 }
-            } 
+            }
         };
 
         var party2 = new[]
@@ -67,7 +75,7 @@ for (var i = 0; i < 5; i++)
         };
 
         // Создадим звонок, в лукапах обзвон и контакт
-        contactIds.Add(crmClient.Create(new Entity
+        var phoneCallId = crmClient.Create(new Entity
         {
             LogicalName = "phonecall",
             Attributes =
@@ -77,6 +85,8 @@ for (var i = 0; i < 5; i++)
                 { "to", party2 },
                 { "new_calling_contacts_entityid", new EntityReference("new_calling_contacts_entity", callingContactsEntityId) }
             }
-        }));
+        });
+
+        Console.WriteLine($"Создан звонок {phoneCallId}");
     }
 }
