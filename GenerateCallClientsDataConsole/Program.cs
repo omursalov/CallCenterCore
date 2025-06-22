@@ -1,9 +1,11 @@
 ﻿using Data8.PowerPlatform.Dataverse.Client;
-using GenerateCallClientsDataConsole;
+using Data8.PowerPlatform.Dataverse.Client.Wsdl;
+using Faker;
+using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using System.Configuration;
-using System.Net.Security;
 using System.Net;
+using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 
 // В будущем нужен норм SSL сертификат, пока так (для теста)
@@ -16,10 +18,13 @@ var crmClient = new OnPremiseClient(
     ConfigurationManager.AppSettings["CrmLogin"],
     ConfigurationManager.AppSettings["CrmPass"]);
 
+var response = (WhoAmIResponse)crmClient.Execute(new WhoAmIRequest());
+var callerId = response.UserId;
+
 for (var i = 0; i < 5; i++)
 {
     // Создадим обзвоны
-    var subject = $"Обзвон {i}";
+    var subject = Company.Name();
     var callingContactsEntityId = crmClient.Create(new Entity
     {
         LogicalName = "new_calling_contacts_entity",
@@ -36,15 +41,16 @@ for (var i = 0; i < 5; i++)
     // Создадим контактов
     for (var j = 0; j < 500; j++)
     {
+        var fioParts = Name.FullName().Split(' ');
         var contactId = crmClient.Create(new Entity
         {
             LogicalName = "contact",
             Attributes =
             {
-                { "firstname", "" },
-                { "lastname", "" },
-                { "middlename", "" },
-                { "mobilephone", $"+7{CommonHelper.RandomDigits(10)}" }
+                { "firstname", fioParts[0] },
+                { "lastname", fioParts[1] },
+                { "middlename", fioParts.Length > 2 ? fioParts[2] : "TEST" },
+                { "mobilephone", Phone.Number().Split(' ')[0] }
             }
         });
 
@@ -57,7 +63,7 @@ for (var i = 0; i < 5; i++)
                 LogicalName = "activityparty",
                 Attributes =
                 {
-                    { "partyid", new EntityReference("systemuserid", crmClient.CallerId) }
+                    { "partyid", new EntityReference("systemuser", callerId) }
                 }
             }
         };
