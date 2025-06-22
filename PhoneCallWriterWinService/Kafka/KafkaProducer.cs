@@ -15,14 +15,14 @@ namespace PhoneCallWriterWinService.Kafka
             BootstrapServers = ConfigurationManager.AppSettings["BootstrapServers"]
         };
 
-        private const int FLUSH_SEC = 2;
         private readonly IProducer<Null, string> _producer;
-        private readonly string _topicName = ConfigurationManager.AppSettings["TopicName"];
+        private readonly string _topicName;
 
-        public KafkaProducer()
+        public KafkaProducer(string topicName)
         {
             try
             {
+                _topicName = topicName;
                 _producer = new ProducerBuilder<Null, string>(_config).Build();
             }
             catch (DllNotFoundException)
@@ -38,20 +38,21 @@ namespace PhoneCallWriterWinService.Kafka
             }
         }
 
-        public void Write(string message)
+        /// <summary>
+        /// Делаем все это синхронно.
+        /// Если в будущем будут большие объемы данных,
+        /// перейдем на async/await, tasks.
+        /// </summary>
+        public void Execute(string message)
         {
-            try
+            _producer.Produce(_topicName, new Message<Null, string> { Value = message }, (dr) =>
             {
-                var x = _producer.ProduceAsync(_topicName, new Message<Null, string> { Value = message }).Result;
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex);
-            }
-            finally
-            {
-                _producer.Flush(TimeSpan.FromSeconds(FLUSH_SEC));
-            }
+                if (!dr.Error.IsError)
+                    _logger.Info($"Сообщение '{message}' отправлено в топик '{_topicName}'");
+                else
+                    _logger.Error($"Не удалось записать сообщение '{message}' в топик '{_topicName}': {dr.Error.Reason}");
+            });
+            _producer.Flush();
         }
 
         public void Dispose() => _producer.Dispose();

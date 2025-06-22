@@ -1,5 +1,6 @@
 ﻿using PhoneCallWriterWinService.Kafka;
 using System;
+using System.Configuration;
 using System.ServiceProcess;
 
 namespace PhoneCallWriterWinService
@@ -12,10 +13,10 @@ namespace PhoneCallWriterWinService
         public static void Main()
         {
 #if DEBUG
-            // Тестирование в режиме DEBUG
-            var kafkaProducer = new KafkaProducer();
+            // Тестирование в режиме DEBUG (проверка записи сообщений в топик)
+            var kafkaProducer = new KafkaProducer(ConfigurationManager.AppSettings["TopicName"]);
             for (var i = 0; i < 100; i++)
-                kafkaProducer.Write(Guid.NewGuid().ToString());
+                kafkaProducer.Execute(Guid.NewGuid().ToString());
             kafkaProducer.Dispose();
 #else
             ServiceBase.Run(new ServiceBase[]

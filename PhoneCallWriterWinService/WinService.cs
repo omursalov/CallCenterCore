@@ -1,5 +1,6 @@
 ﻿using PhoneCallWriterWinService.DB.CRM;
 using PhoneCallWriterWinService.Kafka;
+using System.Configuration;
 using System.ServiceProcess;
 using System.Threading;
 
@@ -14,11 +15,13 @@ namespace PhoneCallWriterWinService
         private readonly KafkaProducer _kafkaProducer;
         private const int DELAY_IN_MIN = 1;
 
+        private static object _lockObj = new object();
+
         public WinService()
         {
             InitializeComponent();
             _crmDbWorker = new CrmDbWorker();
-            _kafkaProducer = new KafkaProducer();
+            _kafkaProducer = new KafkaProducer(ConfigurationManager.AppSettings["TopicName"]);
         }
 
         /// <summary>
@@ -34,7 +37,7 @@ namespace PhoneCallWriterWinService
                 foreach (var callClientsEntity in _crmDbWorker.GetActiveCallClientsEntities())
                 {
                     foreach (var phoneCall in callClientsEntity.PhoneCalls)
-                        _kafkaProducer.Write(MsgConverter.Execute(callClientsEntity, phoneCall));
+                        _kafkaProducer.Execute(MsgConverter.Execute(callClientsEntity, phoneCall));
                 }
                 Thread.Sleep(DELAY_IN_MIN * 1000);
             }

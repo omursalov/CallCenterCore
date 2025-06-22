@@ -60,6 +60,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.6.0.0\lib\net46\NLog.dll</HintPath>
     </Reference>
@@ -91,7 +94,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\CrmDbWorker.cs" />
+    <Compile Include="DB\CRM\CrmDbWorker.cs" />
+    <Compile Include="DB\CRM\Models\CallClientsEntity.cs" />
+    <Compile Include="DB\CRM\Models\PhoneCall.cs" />
+    <Compile Include="Kafka\MsgConverter.cs" />
     <Compile Include="WinService.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -37,3 +37,11 @@ C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\Ph
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCal.F8D743FF.Up2Date
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.exe
 C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\obj\Debug\PhoneCallWriterWinService.pdb
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\Dapper.dll
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\Dapper.xml
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\source\repos\CallCenterCore\PhoneCallWriterWinService\bin\Debug\System.Threading.Tasks.Extensions.xml

@@ -9,7 +9,6 @@ namespace PhoneCallWriterWinService.DB.CRM.Models
     public class CallClientsEntity
     {
         public Guid Id { get; set; }
-        public Guid TemplateId { get; set; }
         public string Name { get; set; }
         public string Welcome { get; set; }
         public string Questions { get; set; }
