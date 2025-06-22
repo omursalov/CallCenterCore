@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CallOpetatorWebApp")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("GenerateCallClientsDataConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c52f40c27a54e6f371e7b7647736acc0af306239")]
-[assembly: System.Reflection.AssemblyProductAttribute("CallOpetatorWebApp")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CallOpetatorWebApp")]
+[assembly: System.Reflection.AssemblyProductAttribute("GenerateCallClientsDataConsole")]
+[assembly: System.Reflection.AssemblyTitleAttribute("GenerateCallClientsDataConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
