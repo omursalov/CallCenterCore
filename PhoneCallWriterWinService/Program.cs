@@ -12,7 +12,7 @@ namespace PhoneCallWriterWinService
         /// </summary>
         public static void Main()
         {
-#if DEBUG
+#if !DEBUG
             // Тестирование в режиме DEBUG (проверка записи сообщений в топик)
             var kafkaProducer = new KafkaProducer(ConfigurationManager.AppSettings["TopicName"]);
             for (var i = 0; i < 100; i++)

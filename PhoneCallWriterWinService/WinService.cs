@@ -32,12 +32,17 @@ namespace PhoneCallWriterWinService
         {
             InitializeComponent();
 
+            // В будущем нужен норм SSL сертификат, пока так (для теста)
+            ServicePointManager.ServerCertificateValidationCallback =
+               delegate (object sender, X509Certificate certificate, X509Chain chain,
+                   SslPolicyErrors sslPolicyErrors) { return true; };
+
             _crmDbWorker = new CrmDbWorker();
 
             try
             {
                 _crmDbWorker.Ping();
-                _logger.Info();
+                _logger.Info("Подключение к CRM DB успешно");
             }
             catch (Exception ex)
             {
@@ -45,11 +50,6 @@ namespace PhoneCallWriterWinService
             }
 
             _kafkaProducer = new KafkaProducer(ConfigurationManager.AppSettings["TopicName"]);
-
-            // В будущем нужен норм SSL сертификат, пока так (для теста)
-            ServicePointManager.ServerCertificateValidationCallback =
-               delegate (object sender, X509Certificate certificate, X509Chain chain,
-                   SslPolicyErrors sslPolicyErrors) { return true; };
 
             _crmClient = new OnPremiseClient(
                 ConfigurationManager.AppSettings["CrmOrgServiceUrl"],

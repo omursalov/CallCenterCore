@@ -28,6 +28,7 @@ namespace PhoneCallWriterWinService.DB.CRM
         {
             using (IDbConnection connection = new SqlConnection(_connectionString))
             {
+                connection.Open();
                 if (int.Parse(connection.ExecuteScalar("select 1").ToString()) != 1)
                     throw new System.Exception("Ошибка взаимодействия с SQL");
             }
@@ -60,7 +61,7 @@ namespace PhoneCallWriterWinService.DB.CRM
                         on c.ContactId = ap.PartyId
                     where cc.statecode = 0
                         and cc.statuscode = 1 -- начало").ToList();
-
+                return new List<CallClientsEntity>();
             }
         }
     }
