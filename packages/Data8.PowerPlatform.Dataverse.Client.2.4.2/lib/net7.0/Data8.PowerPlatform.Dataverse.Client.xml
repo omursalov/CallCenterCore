@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Data8.PowerPlatform.Dataverse.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Data8.PowerPlatform.Dataverse.Client.ADAuthClient">
+            <summary>
+            Inner client to set up the SOAP channel using WS-Trust with SSPI auth
+            </summary>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:Data8.PowerPlatform.Dataverse.Client.ADAuthClient"/>
+            </summary>
+            <param name="url">The URL of the organization service</param>
+            <param name="username">The username to authenticate as</param>
+            <param name="password">The password to authenticate as</param>
+            <param name="upn">The UPN the server process is running under</param>
+        </member>
+        <member name="P:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Timeout">
+            <summary>
+            Returns or sets the timeout for executing requests
+            </summary>
+        </member>
+        <member name="P:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.SdkClientVersion">
+            <summary>
+            Returns or sets the SDK version that will be reported to the server
+            </summary>
+        </member>
+        <member name="P:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.CallerId">
+            <summary>
+            Returns or sets the impersonated user ID
+            </summary>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Authenticate">
+            <summary>
+            Authenticates with the server
+            </summary>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Associate(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Disassociate(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Create(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Retrieve(System.String,System.Guid,Microsoft.Xrm.Sdk.Query.ColumnSet)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.RetrieveMultiple(Microsoft.Xrm.Sdk.Query.QueryBase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Update(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.Delete(System.String,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.ExecuteAsync(Microsoft.Xrm.Sdk.OrganizationRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.ExecuteAsync(Microsoft.Xrm.Sdk.OrganizationRequest,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.AssociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.AssociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.DisassociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.DisassociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.CreateAsync(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.CreateAsync(Microsoft.Xrm.Sdk.Entity,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.CreateAndReturnAsync(Microsoft.Xrm.Sdk.Entity,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.RetrieveAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Query.ColumnSet)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.RetrieveAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Query.ColumnSet,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.RetrieveMultipleAsync(Microsoft.Xrm.Sdk.Query.QueryBase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.RetrieveMultipleAsync(Microsoft.Xrm.Sdk.Query.QueryBase,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.UpdateAsync(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.UpdateAsync(Microsoft.Xrm.Sdk.Entity,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.DeleteAsync(System.String,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthClient.DeleteAsync(System.String,System.Guid,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Data8.PowerPlatform.Dataverse.Client.ADAuthHelpers.Authenticator">
+            <summary>
+            Generates and validates the authenticator hash
+            </summary>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthHelpers.Authenticator.AddToDigest(System.Xml.XmlDocument)">
+            <summary>
+            Adds an XML document to the hash to be authenticated
+            </summary>
+            <param name="xmlDoc">The <see cref="T:System.Xml.XmlDocument"/> to include in the authentication</param>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ADAuthHelpers.Authenticator.Validate(System.Byte[],System.Byte[])">
+            <summary>
+            Checks if the provided authenticator is valid
+            </summary>
+            <param name="proofToken">The key issued by the server</param>
+            <param name="actualAuthenticator">The authenticator provided by the server</param>
+        </member>
+        <member name="T:Data8.PowerPlatform.Dataverse.Client.ClaimsBasedAuthClient">
+            <summary>
+            Inner client to set up the SOAP channel using WS-Trust
+            </summary>
+        </member>
+        <member name="T:Data8.PowerPlatform.Dataverse.Client.ClaimsBasedAuthClient.ServerEntropyWS2007HttpBinding">
+            <summary>
+            A binding for WS-Trust that uses server entropy
+            </summary>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.ClaimsBasedAuthClient.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:Data8.PowerPlatform.Dataverse.Client.ClaimsBasedAuthClient"/>
+            </summary>
+            <param name="url">The URL of the organization service</param>
+            <param name="issuerEndpoint">The URL of the STS endpoint</param>
+        </member>
+        <member name="T:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient">
+            <summary>
+            Implements <see cref="T:Microsoft.Xrm.Sdk.IOrganizationService"/> using SOAP authenticated via WS-Trust username and password.
+            </summary>
+            <remarks>
+            Claims-based authentication, IFD and Active Directory authentication are all supported.
+            </remarks>
+        </member>
+        <member name="T:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.OrgServiceScope">
+            <summary>
+            Adds headers into the SOAP requests
+            </summary>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient"/> using default credentials
+            </summary>
+            <param name="url">The URL of the organization service to connect to</param>
+            <remarks>
+            The <paramref name="url"/> must include the full path to the organization service, e.g. https://org.crm.contoso.com/XRMServices/2011/Organization.svc
+            </remarks>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient"/>
+            </summary>
+            <param name="url">The URL of the organization service to connect to</param>
+            <param name="username">The username to authenticate as</param>
+            <param name="password">The password to authenticate with</param>
+            <remarks>
+            The <paramref name="url"/> must include the full path to the organization service, e.g. https://org.crm.contoso.com/XRMServices/2011/Organization.svc
+            </remarks>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.#ctor(System.String,System.ServiceModel.Description.ClientCredentials)">
+            <summary>
+            Creates a new <see cref="T:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient"/>
+            </summary>
+            <param name="url">The URL of the organization service to connect to</param>
+            <param name="credentials">The credentials to use to authenticate with</param>
+            <remarks>
+            The <paramref name="url"/> must include the full path to the organization service, e.g. https://org.crm.contoso.com/XRMServices/2011/Organization.svc
+            </remarks>
+        </member>
+        <member name="P:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.CallerId">
+            <inheritdoc cref="P:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.CallerId"/>
+        </member>
+        <member name="P:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Timeout">
+            <inheritdoc cref="P:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout"/>
+        </member>
+        <member name="P:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.AuthenticationType">
+            <summary>
+            The type of authentication used to connect to the organization service
+            </summary>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Clone">
+            <summary>
+            Clone the current <see cref="T:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient"/> with the same settings (Credentials, Timeout, CallerId)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.EnableProxyTypes">
+            <summary>
+            Enables support for the early-bound entity types.
+            </summary>
+            <remarks>
+            Early bound types will be loaded from an already-loaded assembly that is marked with the <see cref="T:Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute"/>
+            </remarks>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.EnableProxyTypes(System.Reflection.Assembly)">
+            <summary>
+            Enables support for the early-bound entity types exposed in a specified assembly.
+            </summary>
+            <param name="assembly">The assembly to load the early-bound types from</param>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Associate(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Create(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Delete(System.String,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Disassociate(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Retrieve(System.String,System.Guid,Microsoft.Xrm.Sdk.Query.ColumnSet)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.RetrieveMultiple(Microsoft.Xrm.Sdk.Query.QueryBase)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.Update(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.AssociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.CreateAsync(Microsoft.Xrm.Sdk.Entity,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.CreateAndReturnAsync(Microsoft.Xrm.Sdk.Entity,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.DeleteAsync(System.String,System.Guid,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.DisassociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.ExecuteAsync(Microsoft.Xrm.Sdk.OrganizationRequest,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.RetrieveAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Query.ColumnSet,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.RetrieveMultipleAsync(Microsoft.Xrm.Sdk.Query.QueryBase,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.UpdateAsync(Microsoft.Xrm.Sdk.Entity,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.CreateAsync(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.RetrieveAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Query.ColumnSet)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.UpdateAsync(Microsoft.Xrm.Sdk.Entity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.DeleteAsync(System.String,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.ExecuteAsync(Microsoft.Xrm.Sdk.OrganizationRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.AssociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.DisassociateAsync(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Data8.PowerPlatform.Dataverse.Client.OnPremiseClient.RetrieveMultipleAsync(Microsoft.Xrm.Sdk.Query.QueryBase)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Data8.PowerPlatform.Dataverse.Client.Wsdl.Namespaces">
+            <summary>
+            Classes for parsing WSDL documents.
+            System.ServiceModel.Description.ServiceEndpoint is not currently available in .NET Core - hopefully this will
+            be added in the future - https://github.com/dotnet/wcf/issues/4464 - so this implements the specific parts
+            we require.
+            </summary>
+        </member>
+    </members>
+</doc>

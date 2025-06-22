@@ -1,5 +1,4 @@
 ﻿using Data8.PowerPlatform.Dataverse.Client;
-using Data8.PowerPlatform.Dataverse.Client.Wsdl;
 using Faker;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
