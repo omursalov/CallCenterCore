@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using PhoneCallWriterWinService.DB.CRM.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -44,11 +45,10 @@ namespace PhoneCallWriterWinService.DB.CRM
                          cc.new_name,
                          cc.new_welcome,
                          cc.new_questions,
-                         p.ActivityId as 'phone_call_id',
-                         ap.PartyId as 'contact_id',
-                         c.ContactId,
-                         c.FullName,
-                         c.MobilePhone
+                         p.activityId as 'phone_call_id',
+                         c.contactId,
+                         c.fullName,
+                         c.mobilePhone
                     from new_calling_contacts_entityBase (nolock) cc
                     join PhoneCallBase (nolock) p
                         on cc.new_calling_contacts_entityId = p.new_calling_contacts_entityid
@@ -60,8 +60,40 @@ namespace PhoneCallWriterWinService.DB.CRM
                     join ContactBase (nolock) c
                         on c.ContactId = ap.PartyId
                     where cc.statecode = 0
-                        and cc.statuscode = 1 -- начало").ToList();
-                return new List<CallClientsEntity>();
+                        and cc.statuscode = 1 -- начало").Select(x => (IDictionary<string, object>)x).ToList();
+
+                var result = new List<CallClientsEntity>();
+
+                // Да, если будет миллион строк, тут кривой поиск..
+                // Можно в будущем через словарь сделать.
+                foreach (var item in items)
+                {
+                    var id = Guid.Parse(item["new_calling_contacts_entityId"].ToString());
+                    
+                    var callingContactsEntity = result.FirstOrDefault(x => x.Id == id);
+                    
+                    if (callingContactsEntity == null)
+                    {
+                        callingContactsEntity = new CallClientsEntity
+                        {
+                            Id = id,
+                            Name = item["new_name"].ToString(),
+                            Welcome = item["new_welcome"].ToString(),
+                            Questions = item["new_questions"].ToString()
+                        };
+                        result.Add(callingContactsEntity);
+                    }
+
+                    callingContactsEntity.PhoneCalls.Add(new PhoneCall
+                    {
+                        Id = Guid.Parse(item["phone_call_id"].ToString()),
+                        To = Guid.Parse(item["contactId"].ToString()),
+                        FIO = item["fullName"].ToString(),
+                        MobilePhone = item["mobilePhone"].ToString()
+                    });
+                }
+
+                return result;
             }
         }
     }

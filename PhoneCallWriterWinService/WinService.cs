@@ -68,14 +68,10 @@ namespace PhoneCallWriterWinService
         }
 
         /// <summary>
-        /// Каждую минуту находим в CRM активные обзвоны 
-        /// и их активные звонки, а также информацию о контактах.
-        /// Пишем информацию в Kafka в топик (JSON).
-        /// Обзвоны, когда все их звонки загружены в Kafka,
-        /// переходят в состояние "Загружен в Kafka".
+        /// Пока идет тестирование, он public.
+        /// Потом переведем на private.
         /// </summary>
-        /// <param name="args"></param>
-        protected override void OnStart(string[] args)
+        public void OnStart()
         {
             while (true)
             {
@@ -93,6 +89,16 @@ namespace PhoneCallWriterWinService
                 Thread.Sleep(DELAY_IN_MIN * 1000);
             }
         }
+
+        /// <summary>
+        /// Каждую минуту находим в CRM активные обзвоны 
+        /// и их активные звонки, а также информацию о контактах.
+        /// Пишем информацию в Kafka в топик (JSON).
+        /// Обзвоны, когда все их звонки загружены в Kafka,
+        /// переходят в состояние "Загружен в Kafka".
+        /// </summary>
+        /// <param name="args"></param>
+        protected override void OnStart(string[] args) => OnStart();
 
         /// <summary>
         /// Вероятно, стоит в будущем ориентироваться на метод OnStart,
