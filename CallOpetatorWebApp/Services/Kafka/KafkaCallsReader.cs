@@ -22,9 +22,10 @@ namespace CallOpetatorWebApp.Services.Kafka
             _consumer = new ConsumerBuilder<Null, string>(new ConsumerConfig
             {
                 BootstrapServers = configuration["Kafka:BootstrapServers"],
-                GroupId = "",
+                GroupId = "console-consumer-81101",
                 AutoOffsetReset = AutoOffsetReset.Earliest
             }).Build();
+            _consumer.Subscribe(configuration["Kafka:TopicName"]);
         }
 
         public KafkaOutCall Next()
