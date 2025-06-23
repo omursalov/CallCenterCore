@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenerateCallClientsDataConsole.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad0b29ef765c09976b261aa33ba81a2c23dfa7ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ae01a891976dd1f88b952d0fa74b1e190b5a43b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenerateCallClientsDataConsole.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenerateCallClientsDataConsole.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

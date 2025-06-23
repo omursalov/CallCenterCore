@@ -1,5 +1,6 @@
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\appsettings.json
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.staticwebassets.runtime.json
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\NLog.config
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.exe
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.deps.json
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.runtimeconfig.json
@@ -23,6 +24,7 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Mi
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.Rest.ClientRuntime.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\NLog.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -131,5 +133,3 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\Ca
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.pdb
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.genruntimeconfig.cache
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\ref\CallOpetatorWebApp.dll
-C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\NLog.dll
-C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\NLog.config

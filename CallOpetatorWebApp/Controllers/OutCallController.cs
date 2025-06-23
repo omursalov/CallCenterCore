@@ -98,7 +98,7 @@ namespace CallOpetatorWebApp.Controllers
                 // Обновим поле FROM (от кого)
                 crmClient.Update(new Entity
                 {
-                    Id = previous.OutCall.PhoneCallId,
+                    Id = newCall.OutCall.PhoneCallId,
                     LogicalName = "phonecall",
                     Attributes =
                     {

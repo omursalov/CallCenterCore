@@ -1,5 +1,6 @@
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\CallOpetatorWebApp.exe
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\NLog.config
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\CallOpetatorWebApp.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\CallOpetatorWebApp.deps.json
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\CallOpetatorWebApp.runtimeconfig.json
@@ -21,6 +22,7 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.Rest.ClientRuntime.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\NLog.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
