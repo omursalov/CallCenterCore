@@ -1,20 +1,44 @@
 ﻿using CallOpetatorWebApp.Models;
+using Confluent.Kafka;
+using Newtonsoft.Json;
 
 namespace CallOpetatorWebApp.Services.Kafka
 {
+    /// <summary>
+    /// Буду лочить ОДИН consumer, может и криво, 
+    /// но в будущем можно увеличить кол-во consumers
+    /// </summary>
     public class KafkaCallsReader : IKafkaCallsReader
     {
-        public KafkaCallsReader() { }
+        private IConsumer<Null, string> _consumer;
+        private object _lockObj = new object();
+        private readonly ConsumerConfig _config;
+
+        /// <summary>
+        /// SINGLETON
+        /// </summary>
+        public KafkaCallsReader(IConfiguration configuration) 
+        {
+            _consumer = new ConsumerBuilder<Null, string>(new ConsumerConfig
+            {
+                BootstrapServers = configuration["Kafka:BootstrapServers"],
+                GroupId = "",
+                AutoOffsetReset = AutoOffsetReset.Earliest
+            }).Build();
+        }
 
         public KafkaOutCall Next()
         {
-            return new KafkaOutCall
+            ConsumeResult<Null, string> result = null;
+
+            lock (_lockObj)
             {
-                ContactFIO = "ТЕСТ",
-                Questions = "sdf",
-                Welcome = "dddddddddd",
-                ContactMobilePhone = "777"
-            };
+                result = _consumer.Consume();
+            }
+            
+            return JsonConvert.DeserializeObject<KafkaOutCall>(result.Message.Value);
         }
+
+        public void Dispose() => _consumer.Dispose();
     }
 }

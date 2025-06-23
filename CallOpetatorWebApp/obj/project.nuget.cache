@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "374DJ43rONw=",
+  "dgSpecHash": "oJXK7BsNfew=",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\CallOpetatorWebApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\confluent.kafka\\2.10.1\\confluent.kafka.2.10.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\data8.powerplatform.dataverse.client\\2.4.2\\data8.powerplatform.dataverse.client.2.4.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\librdkafka.redist\\2.10.1\\librdkafka.redist.2.10.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.8\\microsoft.extensions.caching.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.8\\microsoft.extensions.caching.memory.3.1.8.nupkg.sha512",

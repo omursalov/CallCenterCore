@@ -25,6 +25,7 @@
 
     <form asp-controller="OutCall" asp-action="Process" method="get">
         <input asp-for="OutCall.PhoneCallId" type="hidden">
+        <input id="hidden-timer" asp-for="Timer" type="hidden">
         <button type="submit">Завершить</button>
     </form>
 
