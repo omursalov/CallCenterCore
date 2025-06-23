@@ -1,0 +1,28 @@
+﻿@model ViewModels.OutCall
+
+<div class="text-center">
+    <h1 class="display-4">Идет звонок...</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Приветствие</th>
+                <th scope="col">Вопросы</th>
+                <th scope="col">ФИО</th>
+                <th scope="col">Номер</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Model.Welcome</th>
+                <td>@Model.Questions</td>
+                <td>@Model.ContactFIO</td>
+                <td>@Model.ContactMobilePhone</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form asp-controller="Login" asp-action="Index" method="post">
+        <button type="submit">Завершить</button>
+    </form>
+</div>

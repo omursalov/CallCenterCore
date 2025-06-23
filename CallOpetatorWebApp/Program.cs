@@ -1,5 +1,6 @@
 using CallOpetatorWebApp.Services.Cache;
 using CallOpetatorWebApp.Services.Crm;
+using CallOpetatorWebApp.Services.Kafka;
 using Data8.PowerPlatform.Dataverse.Client.Wsdl;
 using System.Configuration;
 
@@ -9,6 +10,7 @@ builder.Services.AddControllersWithViews(); // добавляем сервисы MVC
 
 builder.Services.AddScoped<ICrmService, CrmService>(); // Работа с CRM
 builder.Services.AddSingleton<ICacheService, CacheService>(); // Кеширование (singleton)
+builder.Services.AddSingleton<IKafkaCallsReader, KafkaCallsReader>(); // Кеширование (singleton)
 
 var app = builder.Build();
 
