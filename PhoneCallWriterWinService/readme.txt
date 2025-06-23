@@ -30,3 +30,7 @@ cd C:\kafka_2.13-3.9.1\bin\windows
 
 > Запуск consumer'а правильно
 .\kafka-console-consumer.bat --topic registrations --bootstrap-server localhost:9092 --consumer-property auto.offset.reset=earliest
+
+Установка службы через CMD разработчика ниже.
+> cd ..
+> installUtil.exe ..\PhoneCallWriterWinService.exe

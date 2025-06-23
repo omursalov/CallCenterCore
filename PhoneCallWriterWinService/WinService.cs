@@ -3,6 +3,7 @@ using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using NLog;
 using PhoneCallWriterWinService.DB.CRM;
+using PhoneCallWriterWinService.DB.CRM.Models;
 using PhoneCallWriterWinService.Kafka;
 using System;
 using System.Configuration;
@@ -24,7 +25,7 @@ namespace PhoneCallWriterWinService
         private readonly KafkaProducer _kafkaProducer;
         private readonly OnPremiseClient _crmClient;
 
-        private const int DELAY_IN_MIN = 1;
+        private const int DELAY_IN_MIN = 5;
 
         private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
 
@@ -75,18 +76,32 @@ namespace PhoneCallWriterWinService
         {
             while (true)
             {
-                foreach (var callClientsEntity in _crmDbWorker.GetActiveCallClientsEntities())
+                var callClientsEntities = _crmDbWorker.GetActiveCallClientsEntities();
+
+                if (callClientsEntities.Count > 0)
                 {
-                    foreach (var phoneCall in callClientsEntity.PhoneCalls)
-                        _kafkaProducer.Execute(MsgConverter.Execute(callClientsEntity, phoneCall));
-                    _crmClient.Execute(new SetStateRequest
+                    _logger.Info($"Найдено {callClientsEntities.Count} активных обзвонов");
+                    foreach (var callClientsEntity in _crmDbWorker.GetActiveCallClientsEntities())
                     {
-                        EntityMoniker = new EntityReference("new_calling_contacts_entity", callClientsEntity.Id),
-                        State = new OptionSetValue(0),
-                        Status = new OptionSetValue(100000000)
-                    });
+                        foreach (var phoneCall in callClientsEntity.PhoneCalls)
+                        {
+                            _kafkaProducer.Execute(MsgConverter.Execute(callClientsEntity, phoneCall));
+                            _logger.Info($"Звонок {phoneCall.Id} улетел в Kafka");
+                        }    
+                        _crmClient.Execute(new SetStateRequest
+                        {
+                            EntityMoniker = new EntityReference("new_calling_contacts_entity", callClientsEntity.Id),
+                            State = new OptionSetValue(0),
+                            Status = new OptionSetValue(100000000)
+                        });
+                        _logger.Info($"Обзвон {callClientsEntity.Id} перешел в statuscode = 'Загружено в Kafka'");
+                    }
                 }
-                Thread.Sleep(DELAY_IN_MIN * 1000);
+                else
+                {
+                    _logger.Info($"Не найдено активных обзвонов, DELAY_IN_MIN = {DELAY_IN_MIN}");
+                    Thread.Sleep(DELAY_IN_MIN * 1000);
+                }
             }
         }
 
