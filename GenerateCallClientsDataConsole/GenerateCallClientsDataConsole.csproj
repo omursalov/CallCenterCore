@@ -12,4 +12,6 @@
     <PackageReference Include="Faker.Net" Version="2.0.163" />
   </ItemGroup>
 
+  <Import Project="..\Shared.Common\Shared.Common.projitems" Label="Shared" />
+
 </Project>

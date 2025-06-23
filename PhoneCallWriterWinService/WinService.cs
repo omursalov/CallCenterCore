@@ -1,4 +1,5 @@
 ﻿using Data8.PowerPlatform.Dataverse.Client;
+using GenerateCallClientsDataConsole;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using NLog;
@@ -63,17 +64,14 @@ namespace PhoneCallWriterWinService
 
                 using (var kafkaProducer = new KafkaProducer(ConfigurationManager.AppSettings["TopicName"]))
                 {
-                    var crmClient = new OnPremiseClient(
-                    ConfigurationManager.AppSettings["CrmOrgServiceUrl"],
-                    ConfigurationManager.AppSettings["CrmLogin"],
-                    ConfigurationManager.AppSettings["CrmPass"]);
+                    var crmClient = CrmConnector.Create(out Guid callerId, out Exception ex);
 
-                    try
-                    {
+                    if (callerId != default) 
+                    { 
                         var response = (WhoAmIResponse)crmClient.Execute(new WhoAmIRequest());
                         logger.Info($"WhoAmIResponse.UserId = {response.UserId}");
                     }
-                    catch (Exception ex)
+                    else
                     {
                         logger.Error($"{nameof(OnPremiseClient)}: {ex}");
                     }

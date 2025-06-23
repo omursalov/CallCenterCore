@@ -1,24 +1,9 @@
-﻿using Data8.PowerPlatform.Dataverse.Client;
-using Faker;
+﻿using Faker;
+using GenerateCallClientsDataConsole;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
-using System.Configuration;
-using System.Net;
-using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
 
-// В будущем нужен норм SSL сертификат, пока так (для теста)
-ServicePointManager.ServerCertificateValidationCallback =
-   delegate (object sender, X509Certificate certificate, X509Chain chain,
-       SslPolicyErrors sslPolicyErrors) { return true; };
-
-var crmClient = new OnPremiseClient(
-    ConfigurationManager.AppSettings["CrmOrgServiceUrl"],
-    ConfigurationManager.AppSettings["CrmLogin"],
-    ConfigurationManager.AppSettings["CrmPass"]);
-
-var response = (WhoAmIResponse)crmClient.Execute(new WhoAmIRequest());
-var callerId = response.UserId;
+var crmClient =  CrmConnector.Create(out Guid callerId, out Exception ex);
 
 for (var i = 0; i < 5; i++)
 {
