@@ -36,23 +36,6 @@ namespace CallOpetatorWebApp.Services.Kafka
         {
             ConsumeResult<Null, string> result = null;
 
-
-            /*while (true)
-            {
-                try
-                {
-                    var cr = _consumer.Consume();
-
-                    Console.WriteLine($"Consumed message '{cr.Value}' at: '{cr.TopicPartitionOffset}'.");
-                }
-                catch (ConsumeException e)
-                {
-                    Console.WriteLine($"Error occurred: {e.Error.Reason}");
-
-                }
-            }*/
-
-
             lock (_lockObj)
             {
                 var TIMEOUT_SEC = 5;

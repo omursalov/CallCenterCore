@@ -18,7 +18,26 @@ builder.Services.AddScoped<ICrmService, CrmService>(); // Работа с CRM
 builder.Services.AddSingleton<ICacheService, CacheService>(); // Кеширование (singleton)
 builder.Services.AddSingleton<IKafkaCallsReader, KafkaCallsReader>(); // Чтение звонков из Kafka (singleton)
 
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1",
+        new Microsoft.OpenApi.Models.OpenApiInfo
+        {
+            Title = "Call center - V1",
+            Version = "v1"
+        }
+     );
+
+    var filePath = Path.Combine(System.AppContext.BaseDirectory, "CallOpetatorWebApp.xml");
+    c.IncludeXmlComments(filePath);
+});
+
 var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseStaticFiles();
 

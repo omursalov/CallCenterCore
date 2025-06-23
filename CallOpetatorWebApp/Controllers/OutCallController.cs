@@ -10,6 +10,10 @@ using Newtonsoft.Json;
 
 namespace CallOpetatorWebApp.Controllers
 {
+    /// <summary>
+    /// Здесь происходит обзвон
+    /// </summary>
+    [ApiController]
     public class OutCallController : Controller
     {
         private ICrmService _crmService;
@@ -25,10 +29,21 @@ namespace CallOpetatorWebApp.Controllers
         }
 
         /// <summary>
-        /// Совершается чтение звонка из Kafka и пошло..
+        /// Читаем сессию браузера.
+        /// Смотрим, есть ли предыдущий звонок, который уже завершен.
+        /// Обновляем ему продолжительность общения (в мин), дату завершения звонка.
+        /// Завершаем звонок (деактивируем).
+        /// Получаем из Kafka новый звонок (Kafka reader is singleton, один на все сессии).
+        /// Если не нашли его (в топике нет данных), редиректимся на /End/Index.
+        /// Если нашли, тут будет что-то с телефонией (на будущее).
+        /// Назначаем звонок на оператора колл центра.
+        /// Обновим поле FROM (от кого) на звонке.
+        /// Выводим информацию о звонке (он уже идет) во view.
+        /// Запускаем через JS таймер на html странице.
         /// </summary>
         [HttpGet]
-        public IActionResult Process(OutCallModel previous)
+        [Route("OutCall/Process")]
+        public IActionResult Process([FromForm] OutCallModel previous)
         {
             var crmClient = _crmService.Client;
             var crmUserSession = JsonConvert.DeserializeObject<CrmUserSession>(
@@ -65,13 +80,15 @@ namespace CallOpetatorWebApp.Controllers
             {
                 OutCall = kafkaCall
             };
+
             // Где-то здесь будет интеграция с API телефонией, например..
 
             // Назначаем звонок на оператора колл центра
-            /*crmClient.Execute(new AssignRequest
+            crmClient.Execute(new AssignRequest
             {
-
-            });*/
+                Target = new EntityReference("phonecall", newCall.OutCall.PhoneCallId),
+                Assignee = new EntityReference("systemuser", newCall.OperatorId)
+            });
 
             var party1 = new[]
             {

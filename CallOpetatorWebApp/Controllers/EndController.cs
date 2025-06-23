@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CallOpetatorWebApp.Controllers
 {
+    [ApiController]
     public class EndController : Controller
     {
         private ICrmService _crmService;
@@ -15,7 +16,17 @@ namespace CallOpetatorWebApp.Controllers
             _cacheService = cacheService;
         }
 
+        /// <summary>
+        /// Просто выводим во view, что обзвон закончен.
+        /// Удаляем текущую сессию браузера.
+        /// Оператор может идти домой.
+        /// </summary>
         [HttpGet]
-        public IActionResult Index() => View();
+        [Route("End/Index")]
+        public IActionResult Index()
+        {
+            HttpContext.Session.Remove("crm-user-session");
+            return View();
+        }
     }
 }

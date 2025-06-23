@@ -9,6 +9,10 @@ using Newtonsoft.Json;
 
 namespace CallOpetatorWebApp.Controllers
 {
+    /// <summary>
+    /// Логин авторизации (начальная страница)
+    /// </summary>
+    [ApiController]
     public class LoginController : Controller
     {
         private ICrmService _crmService;
@@ -21,9 +25,12 @@ namespace CallOpetatorWebApp.Controllers
         }
 
         /// <summary>
-        /// Начальная страница при запуске сервиса
+        /// Начальная страница при запуске сервиса.
+        /// Пользователь вводит доменное имя учетки в CRM/AD.
+        /// У пользователя должна быть роль "Чтение звонков, контактов"..
         /// </summary>
         [HttpGet]
+        [Route("Login/Index")]
         public IActionResult Index()
         {
             if (!HttpContext.Session.Keys.Contains("crm-user-session"))
@@ -33,12 +40,15 @@ namespace CallOpetatorWebApp.Controllers
         }
 
         /// <summary>
-        /// Пользователь авторизуется (вводит доменное имя учетки CRM).
+        /// Проверяем, что учетка CRM есть.
+        /// Если нет, снова отобразим view с формой авторизации.
+        /// Если есть, создаем сессию для браузера, редиректимся на /OutCall/Process.
         /// Да, пока не использую CrmContext, Set'ы, early bound..
         /// Это потом можно присобачить.
         /// </summary>
         [HttpPost]
-        public IActionResult Index(LoginModel loginModel)
+        [Route("Login/Index")]
+        public IActionResult Index([FromForm] LoginModel loginModel)
         {
             var users = _cacheService.Execute<IList<Entity>>("get_crm_users", () =>
                 _crmService.Client.RetrieveMultiple(new QueryExpression

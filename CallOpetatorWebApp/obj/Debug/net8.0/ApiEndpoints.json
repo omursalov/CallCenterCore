@@ -1,1 +1,99 @@
-[]
+[
+  {
+    "ContainingType": "CallOpetatorWebApp.Controllers.EndController",
+    "Method": "Index",
+    "RelativePath": "End/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CallOpetatorWebApp.Controllers.LoginController",
+    "Method": "Index",
+    "RelativePath": "Login/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CallOpetatorWebApp.Controllers.LoginController",
+    "Method": "Index",
+    "RelativePath": "Login/Index",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserDomainName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CallOpetatorWebApp.Controllers.OutCallController",
+    "Method": "Process",
+    "RelativePath": "OutCall/Process",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OutCall.CallClientsEntityId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "OutCall.Welcome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OutCall.Questions",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OutCall.PhoneCallId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "OutCall.ContactId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "OutCall.ContactFIO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OutCall.ContactMobilePhone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Timer",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OperatorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OperatorId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

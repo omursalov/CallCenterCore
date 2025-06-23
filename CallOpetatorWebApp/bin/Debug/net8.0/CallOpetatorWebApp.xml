@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CallOpetatorWebApp</name>
+    </assembly>
+    <members>
+        <member name="M:CallOpetatorWebApp.Controllers.EndController.Index">
+            <summary>
+            Просто выводим во view, что обзвон закончен.
+            Удаляем текущую сессию браузера.
+            Оператор может идти домой.
+            </summary>
+        </member>
+        <member name="T:CallOpetatorWebApp.Controllers.LoginController">
+            <summary>
+            Логин авторизации (начальная страница)
+            </summary>
+        </member>
+        <member name="M:CallOpetatorWebApp.Controllers.LoginController.Index">
+            <summary>
+            Начальная страница при запуске сервиса.
+            Пользователь вводит доменное имя учетки в CRM/AD.
+            У пользователя должна быть роль "Чтение звонков, контактов"..
+            </summary>
+        </member>
+        <member name="M:CallOpetatorWebApp.Controllers.LoginController.Index(CallOpetatorWebApp.ViewModels.LoginModel)">
+            <summary>
+            Проверяем, что учетка CRM есть.
+            Если нет, снова отобразим view с формой авторизации.
+            Если есть, создаем сессию для браузера, редиректимся на /OutCall/Process.
+            Да, пока не использую CrmContext, Set'ы, early bound..
+            Это потом можно присобачить.
+            </summary>
+        </member>
+        <member name="T:CallOpetatorWebApp.Controllers.OutCallController">
+            <summary>
+            Здесь происходит обзвон
+            </summary>
+        </member>
+        <member name="M:CallOpetatorWebApp.Controllers.OutCallController.Process(CallOpetatorWebApp.ViewModels.OutCallModel)">
+            <summary>
+            Читаем сессию браузера.
+            Смотрим, есть ли предыдущий звонок, который уже завершен.
+            Обновляем ему продолжительность общения (в мин), дату завершения звонка.
+            Завершаем звонок (деактивируем).
+            Получаем из Kafka новый звонок (Kafka reader is singleton, один на все сессии).
+            Если не нашли его (в топике нет данных), редиректимся на /End/Index.
+            Если нашли, тут будет что-то с телефонией (на будущее).
+            Назначаем звонок на оператора колл центра.
+            Обновим поле FROM (от кого) на звонке.
+            Выводим информацию о звонке (он уже идет) во view.
+            Запускаем через JS таймер на html странице.
+            </summary>
+        </member>
+        <member name="T:CallOpetatorWebApp.Services.Cache.CacheService">
+            <summary>
+            Singleton
+            </summary>
+        </member>
+        <member name="M:CallOpetatorWebApp.Services.Cache.CacheService.Execute``1(System.String,System.Func{``0})">
+            <summary>
+            Тут с lock'ами в будущем можно получше подумать,
+            чтобы не стопать потоки, если много кто лезет в _data,
+            и много где.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CallOpetatorWebApp.Services.Kafka.IKafkaCallsReader">
+            <summary>
+            SINGLETON (пусть пока будет так, в будущем можно увеличить число consumers)
+            </summary>
+        </member>
+        <member name="M:CallOpetatorWebApp.Services.Kafka.IKafkaCallsReader.Next">
+            <summary>
+            Получить следующий звонок
+            </summary>
+        </member>
+        <member name="T:CallOpetatorWebApp.Services.Kafka.KafkaCallsReader">
+            <summary>
+            Буду лочить ОДИН consumer, может и криво, 
+            но в будущем можно увеличить кол-во consumers
+            </summary>
+        </member>
+        <member name="M:CallOpetatorWebApp.Services.Kafka.KafkaCallsReader.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            SINGLETON
+            </summary>
+        </member>
+        <member name="M:CallOpetatorWebApp.Services.Kafka.KafkaCallsReader.Next">
+            <summary>
+            Может вернуть NULL (нет звонков в Kafka, кончились)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CallOpetatorWebApp.ViewModels.OutCallModel.OutCall">
+            <summary>
+            Звонок из Kafka (инфа)
+            </summary>
+        </member>
+        <member name="P:CallOpetatorWebApp.ViewModels.OutCallModel.Timer">
+            <summary>
+            Сколько говорим? (скажем, в минутах)
+            </summary>
+        </member>
+        <member name="P:CallOpetatorWebApp.ViewModels.OutCallModel.OperatorName">
+            <summary>
+            Доменное имя оператор
+            </summary>
+        </member>
+        <member name="P:CallOpetatorWebApp.ViewModels.OutCallModel.OperatorId">
+            <summary>
+            CRM ID оператор
+            </summary>
+        </member>
+    </members>
+</doc>

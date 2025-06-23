@@ -5,6 +5,7 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Ca
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.runtimeconfig.json
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.pdb
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.xml
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Confluent.Kafka.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Data8.PowerPlatform.Dataverse.Client.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.Identity.Client.dll
@@ -15,12 +16,16 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Mi
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.Saml.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Xml.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.Crm.Sdk.Proxy.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.PowerPlatform.Dataverse.Client.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.Xrm.Sdk.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.Rest.ClientRuntime.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\System.Runtime.Caching.dll
@@ -104,6 +109,7 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\Ca
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.AssemblyInfo.cs
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.RazorAssemblyInfo.cache
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.RazorAssemblyInfo.cs
@@ -121,6 +127,7 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\sc
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpet.08CA05B9.Up2Date
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\refint\CallOpetatorWebApp.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.xml
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.pdb
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\CallOpetatorWebApp.genruntimeconfig.cache
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Debug\net8.0\ref\CallOpetatorWebApp.dll
