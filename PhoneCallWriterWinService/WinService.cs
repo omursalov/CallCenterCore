@@ -3,7 +3,6 @@ using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using NLog;
 using PhoneCallWriterWinService.DB.CRM;
-using PhoneCallWriterWinService.DB.CRM.Models;
 using PhoneCallWriterWinService.Kafka;
 using System;
 using System.Configuration;
@@ -12,6 +11,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.ServiceProcess;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace PhoneCallWriterWinService
 {
@@ -21,51 +21,15 @@ namespace PhoneCallWriterWinService
     /// </summary>
     public partial class WinService : ServiceBase
     {
-        private readonly CrmDbWorker _crmDbWorker;
-        private readonly KafkaProducer _kafkaProducer;
-        private readonly OnPremiseClient _crmClient;
-
-        private const int DELAY_IN_MIN = 5;
-
-        private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
+        private Task _task;
+        private CancellationTokenSource _cancelTokenSource;
+        private CancellationToken _token;
 
         public WinService()
         {
             InitializeComponent();
-
-            // В будущем нужен норм SSL сертификат, пока так (для теста)
-            ServicePointManager.ServerCertificateValidationCallback =
-               delegate (object sender, X509Certificate certificate, X509Chain chain,
-                   SslPolicyErrors sslPolicyErrors) { return true; };
-
-            _crmDbWorker = new CrmDbWorker();
-
-            try
-            {
-                _crmDbWorker.Ping();
-                _logger.Info("Подключение к CRM DB успешно");
-            }
-            catch (Exception ex)
-            {
-                _logger.Error($"{nameof(CrmDbWorker)}: {ex}");
-            }
-
-            _kafkaProducer = new KafkaProducer(ConfigurationManager.AppSettings["TopicName"]);
-
-            _crmClient = new OnPremiseClient(
-                ConfigurationManager.AppSettings["CrmOrgServiceUrl"],
-                ConfigurationManager.AppSettings["CrmLogin"],
-                ConfigurationManager.AppSettings["CrmPass"]);
-
-            try
-            {
-                var response = (WhoAmIResponse)_crmClient.Execute(new WhoAmIRequest());
-                _logger.Info($"WhoAmIResponse.UserId = {response.UserId}");
-            }
-            catch (Exception ex)
-            {
-                _logger.Error($"{nameof(OnPremiseClient)}: {ex}");
-            }
+            _cancelTokenSource = new CancellationTokenSource();
+            _token = _cancelTokenSource.Token;
         }
 
         /// <summary>
@@ -76,39 +40,97 @@ namespace PhoneCallWriterWinService
         /// </summary>
         public void OnStart()
         {
-            while (true)
+            _task = Task.Run(() =>
             {
-                var callClientsEntities = _crmDbWorker.GetActiveCallClientsEntities();
+                var logger = LogManager.GetCurrentClassLogger();
 
-                if (callClientsEntities.Count > 0)
+                // В будущем нужен норм SSL сертификат, пока так (для теста)
+                ServicePointManager.ServerCertificateValidationCallback =
+                   delegate (object sender, X509Certificate certificate, X509Chain chain,
+                   SslPolicyErrors sslPolicyErrors) { return true; };
+
+                var crmDbWorker = new CrmDbWorker();
+
+                try
                 {
-                    _logger.Info($"Найдено {callClientsEntities.Count} активных обзвонов");
-                    foreach (var callClientsEntity in _crmDbWorker.GetActiveCallClientsEntities())
+                    crmDbWorker.Ping();
+                    logger.Info("Подключение к CRM DB успешно");
+                }
+                catch (Exception ex)
+                {
+                    logger.Error($"{nameof(CrmDbWorker)}: {ex}");
+                }
+
+                using (var kafkaProducer = new KafkaProducer(ConfigurationManager.AppSettings["TopicName"]))
+                {
+                    var crmClient = new OnPremiseClient(
+                    ConfigurationManager.AppSettings["CrmOrgServiceUrl"],
+                    ConfigurationManager.AppSettings["CrmLogin"],
+                    ConfigurationManager.AppSettings["CrmPass"]);
+
+                    try
                     {
-                        foreach (var phoneCall in callClientsEntity.PhoneCalls)
+                        var response = (WhoAmIResponse)crmClient.Execute(new WhoAmIRequest());
+                        logger.Info($"WhoAmIResponse.UserId = {response.UserId}");
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.Error($"{nameof(OnPremiseClient)}: {ex}");
+                    }
+
+                    while (true)
+                    {
+                        var callClientsEntities = crmDbWorker.GetActiveCallClientsEntities();
+
+                        if (_token.IsCancellationRequested)
+                            break;
+
+                        if (callClientsEntities.Count > 0)
                         {
-                            _kafkaProducer.Execute(MsgConverter.Execute(callClientsEntity, phoneCall));
-                            _logger.Info($"Звонок {phoneCall.Id} улетел в Kafka");
-                        }    
-                        _crmClient.Execute(new SetStateRequest
+                            logger.Info($"Найдено {callClientsEntities.Count} активных обзвонов");
+                            foreach (var callClientsEntity in crmDbWorker.GetActiveCallClientsEntities())
+                            {
+                                foreach (var phoneCall in callClientsEntity.PhoneCalls)
+                                {
+                                    kafkaProducer.Execute(MsgConverter.Execute(callClientsEntity, phoneCall));
+                                    logger.Info($"Звонок {phoneCall.Id} улетел в Kafka");
+                                }
+
+                                crmClient.Execute(new SetStateRequest
+                                {
+                                    EntityMoniker = new EntityReference("new_calling_contacts_entity", callClientsEntity.Id),
+                                    State = new OptionSetValue(0),
+                                    Status = new OptionSetValue(100000000)
+                                });
+                                logger.Info($"Обзвон {callClientsEntity.Id} перешел в statuscode = 'Загружено в Kafka'");
+
+                                if (_token.IsCancellationRequested)
+                                    break;
+                            }
+                        }
+                        else
                         {
-                            EntityMoniker = new EntityReference("new_calling_contacts_entity", callClientsEntity.Id),
-                            State = new OptionSetValue(0),
-                            Status = new OptionSetValue(100000000)
-                        });
-                        _logger.Info($"Обзвон {callClientsEntity.Id} перешел в statuscode = 'Загружено в Kafka'");
+                            var DELAY_IN_SEC = 30;
+                            logger.Info($"Не найдено активных обзвонов, DELAY_IN_SEC = {DELAY_IN_SEC}");
+                            Thread.Sleep(DELAY_IN_SEC * 1000);
+                        }
                     }
                 }
-                else
-                {
-                    _logger.Info($"Не найдено активных обзвонов, DELAY_IN_MIN = {DELAY_IN_MIN}");
-                    Thread.Sleep(DELAY_IN_MIN * 1000);
-                }
-            }
+            }, _token);
         }
 
         /// <summary>
-        /// Каждую минуту находим в CRM активные обзвоны 
+        /// Ожидаем, чтобы _task завершилась
+        /// </summary>
+        public void Stop()
+        {
+            var WAIT_CANCEL_IN_SEC = 60;
+            _cancelTokenSource.Cancel();
+            Thread.Sleep(WAIT_CANCEL_IN_SEC * 1000);
+        }
+
+        /// <summary>
+        /// Находим в CRM активные обзвоны 
         /// и их активные звонки, а также информацию о контактах.
         /// Пишем информацию в Kafka в топик (JSON).
         /// Обзвоны, когда все их звонки загружены в Kafka,
@@ -117,12 +139,6 @@ namespace PhoneCallWriterWinService
         /// <param name="args"></param>
         protected override void OnStart(string[] args) => OnStart();
 
-        /// <summary>
-        /// Вероятно, стоит в будущем ориентироваться на метод OnStart,
-        /// ожидать, когда _kafkaProducer ответит, когда он будет не занят..
-        /// И, вроде, когда отрабатывает OnStop, дается сколько-то времени на завершение службы..
-        /// В общем, тут еще подумать на будущее..
-        /// </summary>
-        protected override void OnStop() => _kafkaProducer.Dispose();
+        protected override void OnStop() => Stop();
     }
 }

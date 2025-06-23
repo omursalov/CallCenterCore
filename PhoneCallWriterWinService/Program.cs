@@ -2,6 +2,7 @@
 using System;
 using System.Configuration;
 using System.ServiceProcess;
+using System.Threading;
 
 namespace PhoneCallWriterWinService
 {
@@ -18,7 +19,10 @@ namespace PhoneCallWriterWinService
             for (var i = 0; i < 100; i++)
                 kafkaProducer.Execute(Guid.NewGuid().ToString());
             kafkaProducer.Dispose();*/
-            new WinService().OnStart();
+            var winService = new WinService();
+            winService.OnStart();
+            Thread.Sleep(10000);
+            winService.Stop();
 #else
             ServiceBase.Run(new ServiceBase[]
             {
