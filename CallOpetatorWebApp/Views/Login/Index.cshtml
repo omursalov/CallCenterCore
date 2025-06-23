@@ -1,4 +1,9 @@
-﻿<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core XXX</a>.</p>
+﻿@model ViewModels.LoginModel
+
+<div class="text-center">
+    <h1 class="display-4">Авторизуйтесь в системе "Call center"</h1>
+    <form asp-controller="Login" asp-action="Index" method="post">
+        <label>UserDomainName: <input asp-for="UserDomainName" /></label> <br />
+        <button type="submit">Войти</button>
+    </form>
 </div>

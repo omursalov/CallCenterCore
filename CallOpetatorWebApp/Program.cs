@@ -1,6 +1,12 @@
+using CallOpetatorWebApp.Services.Cache;
+using CallOpetatorWebApp.Services.Crm;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews(); // добавляем сервисы MVC
+
+builder.Services.AddScoped<ICrmService, CrmService>(); // Работа с CRM
+builder.Services.AddSingleton<ICacheService, CacheService>(); // Кеширование (singleton)
 
 var app = builder.Build();
 
