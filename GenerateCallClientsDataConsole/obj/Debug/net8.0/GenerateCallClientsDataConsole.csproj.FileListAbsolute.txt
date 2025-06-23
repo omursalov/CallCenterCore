@@ -5,6 +5,7 @@ C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Deb
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\GenerateCallClientsDataConsole.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\GenerateCallClientsDataConsole.pdb
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\Data8.PowerPlatform.Dataverse.Client.dll
+C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\Faker.Net.6.0.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
@@ -43,6 +44,7 @@ C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Deb
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\System.ServiceModel.Http.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\System.ServiceModel.Primitives.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\de-DE\Faker.Net.6.0.resources.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\cs\System.ServiceModel.Federation.resources.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\de\System.ServiceModel.Federation.resources.dll
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\es\System.ServiceModel.Federation.resources.dll
@@ -101,5 +103,3 @@ C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\obj\Deb
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\obj\Debug\net8.0\GenerateCallClientsDataConsole.pdb
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\obj\Debug\net8.0\GenerateCallClientsDataConsole.genruntimeconfig.cache
 C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\obj\Debug\net8.0\ref\GenerateCallClientsDataConsole.dll
-C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\Faker.Net.6.0.dll
-C:\Users\user\source\repos\CallCenterCore\GenerateCallClientsDataConsole\bin\Debug\net8.0\de-DE\Faker.Net.6.0.resources.dll

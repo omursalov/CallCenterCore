@@ -20,9 +20,9 @@ namespace GenerateCallClientsDataConsole
                    SslPolicyErrors sslPolicyErrors) { return true; };
 
             var crmClient = new OnPremiseClient(
-                ConfigurationManager.AppSettings["CrmOrgServiceUrl"],
-                ConfigurationManager.AppSettings["CrmLogin"],
-                ConfigurationManager.AppSettings["CrmPass"]);
+                System.Configuration.ConfigurationManager.AppSettings["CrmOrgServiceUrl"],
+                System.Configuration.ConfigurationManager.AppSettings["CrmLogin"],
+                System.Configuration.ConfigurationManager.AppSettings["CrmPass"]);
 
             try
             {
