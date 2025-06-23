@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/source/repos/CallCenterCore/CallOpetatorWebApp/Views/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/user/source/repos/CallCenterCore/CallOpetatorWebApp/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

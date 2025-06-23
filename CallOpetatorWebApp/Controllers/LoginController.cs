@@ -1,9 +1,11 @@
-﻿using CallOpetatorWebApp.Services.Cache;
+﻿using CallOpetatorWebApp.Models;
+using CallOpetatorWebApp.Services.Cache;
 using CallOpetatorWebApp.Services.Crm;
 using CallOpetatorWebApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
+using Newtonsoft.Json;
 
 namespace CallOpetatorWebApp.Controllers
 {
@@ -24,7 +26,10 @@ namespace CallOpetatorWebApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            if (!HttpContext.Session.Keys.Contains("crm-user-session"))
+                return View();
+            else
+                return Redirect("~/OutCall/Process");
         }
 
         /// <summary>
@@ -44,8 +49,15 @@ namespace CallOpetatorWebApp.Controllers
                 }).Entities.ToList());
 
             if (!string.IsNullOrWhiteSpace(loginModel.UserDomainName)
-                && users.Any(x => x["domainname"].ToString().ToLower() == loginModel.UserDomainName.ToLower()))
+                && users.FirstOrDefault(x => x["domainname"].ToString().ToLower() == loginModel.UserDomainName.ToLower()) is Entity currCrmUser
+                && currCrmUser != null)
             {
+                // Сериализуем и пишем инфу о сессии в cache
+                HttpContext.Session.SetString("crm-user-session", JsonConvert.SerializeObject(new CrmUserSession
+                {
+                    Id = Guid.Parse(currCrmUser["systemuserid"].ToString()),
+                    DomainName = loginModel.UserDomainName
+                }));
                 return Redirect("~/OutCall/Process");
             }
 

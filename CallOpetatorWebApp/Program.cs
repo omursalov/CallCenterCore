@@ -1,18 +1,26 @@
 using CallOpetatorWebApp.Services.Cache;
 using CallOpetatorWebApp.Services.Crm;
 using CallOpetatorWebApp.Services.Kafka;
-using Data8.PowerPlatform.Dataverse.Client.Wsdl;
-using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = "Operator.Of.CallCenter.Session";
+    options.IdleTimeout = TimeSpan.FromSeconds(28800); // 8 часов
+    options.Cookie.IsEssential = true;
+});
 
 builder.Services.AddControllersWithViews(); // добавляем сервисы MVC
 
 builder.Services.AddScoped<ICrmService, CrmService>(); // Работа с CRM
 builder.Services.AddSingleton<ICacheService, CacheService>(); // Кеширование (singleton)
-builder.Services.AddSingleton<IKafkaCallsReader, KafkaCallsReader>(); // Кеширование (singleton)
+builder.Services.AddSingleton<IKafkaCallsReader, KafkaCallsReader>(); // Чтение звонков из Kafka (singleton)
 
 var app = builder.Build();
+
+app.UseSession();   // добавляем middleware для работы с сессиями
 
 // устанавливаем сопоставление маршрутов с контроллерами
 app.MapControllerRoute(
