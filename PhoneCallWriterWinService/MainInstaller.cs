@@ -16,7 +16,7 @@ namespace PhoneCallWriterWinService
             processInstaller = new ServiceProcessInstaller();
 
             processInstaller.Account = ServiceAccount.LocalSystem;
-            serviceInstaller.StartType = ServiceStartMode.Automatic;
+            serviceInstaller.StartType = ServiceStartMode.Manual;
             serviceInstaller.ServiceName = "PhoneCallWriterWinService";
             serviceInstaller.Description = 
                 "Данная служба дергает каждую минуту SQL запрос, ищет активные обзвоны и звонки в CRM." +
