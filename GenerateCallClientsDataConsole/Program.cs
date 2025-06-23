@@ -31,7 +31,8 @@ for (var i = 0; i < 5; i++)
         {
             { "new_name", subject },
             { "new_welcome", "Привет! Готовы предложить Вам.." },
-            { "new_questions", "Вопрос 1\nВопрос 2\nВопрос 3.." }
+            { "new_questions", "Вопрос 1\nВопрос 2\nВопрос 3.." },
+            { "statuscode", new OptionSetValue(100000001) } // Генерация данных (чтобы в Kafka раньше времени не улетело)
         }
     });
 
@@ -94,4 +95,12 @@ for (var i = 0; i < 5; i++)
 
         Console.WriteLine($"Создан звонок {phoneCallId}");
     }
+
+    crmClient.Execute(new SetStateRequest
+    {
+        EntityMoniker = new EntityReference("new_calling_contacts_entity", callingContactsEntityId),
+        State = new OptionSetValue(0),
+        Status = new OptionSetValue(1) // Начало
+    });
+    Console.WriteLine($"Сменили statuscode на 1 у обзвона {callingContactsEntityId}");
 }

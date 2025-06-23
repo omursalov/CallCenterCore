@@ -71,6 +71,8 @@ namespace PhoneCallWriterWinService
         /// <summary>
         /// Пока идет тестирование, он public.
         /// Потом переведем на private.
+        /// UPD - не совсем корректно, оказывается блочить OnStart не надо.
+        /// Сделаем таску..
         /// </summary>
         public void OnStart()
         {
