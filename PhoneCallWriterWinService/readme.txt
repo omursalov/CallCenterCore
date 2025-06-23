@@ -17,19 +17,19 @@ cd C:\kafka_2.13-3.9.1\bin\windows
 .\kafka-server-start.bat ..\..\config\kraft\server-3.properties
 
 > Создание топика
-.\kafka-topics.bat --create --topic registrations --bootstrap-server localhost:9092
+.\kafka-topics.bat --create --topic OUTGOING_CALLS --bootstrap-server localhost:9092
 
 > Запись в топик
-.\kafka-console-producer.bat --topic registrations --bootstrap-server localhost:9092
+.\kafka-console-producer.bat --topic OUTGOING_CALLS --bootstrap-server localhost:9092
 
 > Чтение из Kafka
-.\kafka-console-consumer.bat --topic registrations --bootstrap-server localhost:9092
+.\kafka-console-consumer.bat --topic OUTGOING_CALLS --bootstrap-server localhost:9092
 
 консьюмер Кафки по умолчанию начинает читать данные с конца топика в тот момент, когда он запустился (см. настройку auto.offset.reset). 
 Поэтому, чтобы прочитать данные, записанные ДО старта консьюмера, нужно переопределить эту конфигу.
 
 > Запуск consumer'а правильно
-.\kafka-console-consumer.bat --topic registrations --bootstrap-server localhost:9092 --consumer-property auto.offset.reset=earliest
+.\kafka-console-consumer.bat --topic OUTGOING_CALLS --bootstrap-server localhost:9092 --consumer-property auto.offset.reset=earliest
 
 Установка службы через CMD разработчика ниже.
 > cd ..
