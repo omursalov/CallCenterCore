@@ -4,6 +4,11 @@
         <name>CallOpetatorWebApp</name>
     </assembly>
     <members>
+        <member name="M:CallOpetatorWebApp.Controllers.BaseController.WrapperExecute(System.Func{Microsoft.AspNetCore.Mvc.IActionResult})">
+            <summary>
+            Логировать ошибки, для тестов сделал
+            </summary>
+        </member>
         <member name="M:CallOpetatorWebApp.Controllers.EndController.Index">
             <summary>
             Просто выводим во view, что обзвон закончен.

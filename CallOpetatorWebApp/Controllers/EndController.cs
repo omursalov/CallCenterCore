@@ -1,20 +1,16 @@
 ﻿using CallOpetatorWebApp.Services.Cache;
 using CallOpetatorWebApp.Services.Crm;
+using CallOpetatorWebApp.Services.Kafka;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CallOpetatorWebApp.Controllers
 {
     [ApiController]
-    public class EndController : Controller
+    public class EndController : BaseController
     {
-        private ICrmService _crmService;
-        private ICacheService _cacheService;
-
-        public EndController(ICrmService crmService, ICacheService cacheService, IConfiguration configuration)
-        {
-            _crmService = crmService;
-            _cacheService = cacheService;
-        }
+        public EndController(ICrmService crmService, 
+            ICacheService cacheService, IKafkaCallsReader kafkaCallsReader)
+            : base(crmService, cacheService, kafkaCallsReader) { }
 
         /// <summary>
         /// Просто выводим во view, что обзвон закончен.
@@ -24,9 +20,10 @@ namespace CallOpetatorWebApp.Controllers
         [HttpGet]
         [Route("End/Index")]
         public IActionResult Index()
-        {
-            HttpContext.Session.Remove("crm-user-session");
-            return View();
-        }
+            => WrapperExecute(() =>
+            {
+                HttpContext.Session.Remove("crm-user-session");
+                return View();
+            });
     }
 }

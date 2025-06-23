@@ -10,6 +10,7 @@
         "dependencies": {
           "Confluent.Kafka": "2.10.1",
           "Data8.PowerPlatform.Dataverse.Client": "2.4.2",
+          "NLog": "6.0.0",
           "Swashbuckle.AspNetCore": "9.0.1",
           "Swashbuckle.AspNetCore.Swagger": "9.0.1",
           "Swashbuckle.AspNetCore.SwaggerUI": "9.0.1"
@@ -406,6 +407,14 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
             "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "NLog/6.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/NLog.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.4146"
           }
         }
       },
@@ -1421,6 +1430,13 @@
       "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "NLog/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3wqlcN80L6OHh0ZTQR/F+eZBeaAZ109XbvCEbtZ/nG5B/S+XzGOxv67RAfMx0YMkHY1aAHyW245k0/OE7J0ZxA==",
+      "path": "nlog/6.0.0",
+      "hashPath": "nlog.6.0.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",

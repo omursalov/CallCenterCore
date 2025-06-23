@@ -52,6 +52,11 @@
             Запускаем через JS таймер на html странице.
             </summary>
         </member>
+        <member name="P:CallOpetatorWebApp.Models.CrmUserSession.Id">
+            <summary>
+            CRM ID пользователя
+            </summary>
+        </member>
         <member name="T:CallOpetatorWebApp.Services.Cache.CacheService">
             <summary>
             Singleton
