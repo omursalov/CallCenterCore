@@ -14,12 +14,16 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.Saml.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Xml.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.Crm.Sdk.Proxy.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.PowerPlatform.Dataverse.Client.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.Xrm.Sdk.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.Rest.ClientRuntime.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\System.Drawing.Common.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\System.Runtime.Caching.dll
@@ -98,3 +102,4 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\PubTmp\Out\CallOpetatorWebApp.xml

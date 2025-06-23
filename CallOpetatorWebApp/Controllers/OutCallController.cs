@@ -87,7 +87,7 @@ namespace CallOpetatorWebApp.Controllers
             crmClient.Execute(new AssignRequest
             {
                 Target = new EntityReference("phonecall", newCall.OutCall.PhoneCallId),
-                Assignee = new EntityReference("systemuser", newCall.OperatorId)
+                Assignee = new EntityReference("systemuser", crmUserSession.Id)
             });
 
             var party1 = new[]

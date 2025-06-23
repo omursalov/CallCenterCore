@@ -43,6 +43,8 @@ app.UseStaticFiles();
 
 app.UseSession();   // добавляем middleware для работы с сессиями
 
+app.UseRouting();
+
 // устанавливаем сопоставление маршрутов с контроллерами
 app.MapControllerRoute(
     name: "default",

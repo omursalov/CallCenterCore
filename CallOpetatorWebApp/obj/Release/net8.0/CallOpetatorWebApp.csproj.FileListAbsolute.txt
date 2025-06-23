@@ -124,3 +124,10 @@ C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Release\net8.0\
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\CallOpetatorWebApp.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\CallOpet.08CA05B9.Up2Date
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Release\net8.0\CallOpetatorWebApp.xml
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Release\net8.0\Microsoft.OpenApi.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Release\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Release\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Release\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\CallOpetatorWebApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\obj\Release\net8.0\CallOpetatorWebApp.xml
