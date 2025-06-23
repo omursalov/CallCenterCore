@@ -7,6 +7,11 @@ namespace CallOpetatorWebApp.Services.Crm
     {
         private IConfiguration _configuration;
 
+        public CrmService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public OnPremiseClient Client => CrmConnector.Create(
             _configuration["Crm:OrgUrl"], _configuration["Crm:Login"], _configuration["Crm:Pass"],
             out Guid callerId, out Exception ex);

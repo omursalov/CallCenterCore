@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews(); // добавляем сервисы MVC
 
-builder.Services.AddSingleton<IConfiguration, Configuration>();
 builder.Services.AddScoped<ICrmService, CrmService>(); // Работа с CRM
 builder.Services.AddSingleton<ICacheService, CacheService>(); // Кеширование (singleton)
 
