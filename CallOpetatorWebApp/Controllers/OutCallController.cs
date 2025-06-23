@@ -28,18 +28,18 @@ namespace CallOpetatorWebApp.Controllers
         /// Совершается чтение звонка из Kafka и пошло..
         /// </summary>
         [HttpGet]
-        public IActionResult Process(OutCall previous)
+        public IActionResult Process(OutCallModel previous)
         {
             var crmClient = _crmService.Client;
             var crmUserSession = JsonConvert.DeserializeObject<CrmUserSession>(
                 HttpContext.Session.GetString("crm-user-session"));
 
-            if (previous != null && previous.PhoneCallId != default)
+            if (previous?.OutCall != null)
             {
                 // Ставим продолжительность общения (update)
                 crmClient.Update(new Entity
                 {
-                    Id = previous.PhoneCallId,
+                    Id = previous.OutCall.PhoneCallId,
                     LogicalName = "phonecall",
                     Attributes =
                     {
@@ -51,13 +51,16 @@ namespace CallOpetatorWebApp.Controllers
                 // Завершаем предыдущий звонок (деактивируем)
                 crmClient.Execute(new SetStateRequest
                 {
-                    EntityMoniker = new EntityReference("phonecall", previous.PhoneCallId),
+                    EntityMoniker = new EntityReference("phonecall", previous.OutCall.PhoneCallId),
                     State = new OptionSetValue(1), // Completed
                     Status = new OptionSetValue(4) // Received
                 });
             }
 
-            var newCall = _kafkaCallsReader.Next();
+            var newCall = new OutCallModel
+            {
+                OutCall = _kafkaCallsReader.Next()
+            };
             // Где-то здесь будет интеграция с API телефонией, например..
 
             // Назначаем звонок на оператора колл центра
@@ -81,7 +84,7 @@ namespace CallOpetatorWebApp.Controllers
             // Обновим поле FROM (от кого)
             crmClient.Update(new Entity
             {
-                Id = previous.PhoneCallId,
+                Id = previous.OutCall.PhoneCallId,
                 LogicalName = "phonecall",
                 Attributes =
                 {
@@ -89,8 +92,8 @@ namespace CallOpetatorWebApp.Controllers
                 }
             });
 
-            ViewBag.OperatorId = crmUserSession.Id;
-            ViewBag.OperatorName = crmUserSession.DomainName;
+            newCall.OperatorId = crmUserSession.Id;
+            newCall.OperatorName = crmUserSession.DomainName;
 
             return View(newCall);
         }

@@ -1,4 +1,4 @@
-﻿using CallOpetatorWebApp.ViewModels;
+﻿using CallOpetatorWebApp.Models;
 
 namespace CallOpetatorWebApp.Services.Kafka
 {
@@ -6,9 +6,9 @@ namespace CallOpetatorWebApp.Services.Kafka
     {
         public KafkaCallsReader() { }
 
-        public OutCall Next()
+        public KafkaOutCall Next()
         {
-            return new OutCall
+            return new KafkaOutCall
             {
                 ContactFIO = "ТЕСТ",
                 Questions = "sdf",

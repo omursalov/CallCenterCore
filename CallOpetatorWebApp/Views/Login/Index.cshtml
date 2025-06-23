@@ -3,7 +3,13 @@
 <div class="text-center">
     <h1 class="display-4">Авторизуйтесь в системе "Call center"</h1>
     <form asp-controller="Login" asp-action="Index" method="post">
-        <label>UserDomainName: <input asp-for="UserDomainName" /></label> <br />
-        <button type="submit">Войти</button>
+        <div class="form-group">
+            <label for="exampleInputEmail1">UserDomainName</label>
+            <input asp-for="UserDomainName" />
+            <small id="emailHelp" class="form-text text-muted">Введите доменное имя своей учетки CRM</small>
+        </div>
+        <div class="form-group" style="margin-top: 15px;">
+            <button type="submit" class="btn btn-primary">Войти</button>
+        </div>
     </form>
 </div>

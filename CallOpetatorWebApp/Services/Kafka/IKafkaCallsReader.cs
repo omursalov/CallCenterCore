@@ -1,4 +1,4 @@
-﻿using CallOpetatorWebApp.ViewModels;
+﻿using CallOpetatorWebApp.Models;
 
 namespace CallOpetatorWebApp.Services.Kafka
 {
@@ -10,6 +10,6 @@ namespace CallOpetatorWebApp.Services.Kafka
         /// <summary>
         /// Получить следующий звонок
         /// </summary>
-        OutCall Next();
+        KafkaOutCall Next();
     }
 }

@@ -4,6 +4,8 @@ using CallOpetatorWebApp.Services.Kafka;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews(); // добавляем сервисы MVC
+
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -12,13 +14,13 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-builder.Services.AddControllersWithViews(); // добавляем сервисы MVC
-
 builder.Services.AddScoped<ICrmService, CrmService>(); // Работа с CRM
 builder.Services.AddSingleton<ICacheService, CacheService>(); // Кеширование (singleton)
 builder.Services.AddSingleton<IKafkaCallsReader, KafkaCallsReader>(); // Чтение звонков из Kafka (singleton)
 
 var app = builder.Build();
+
+app.UseStaticFiles();
 
 app.UseSession();   // добавляем middleware для работы с сессиями
 

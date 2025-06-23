@@ -11,6 +11,34 @@
       "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\views\\outcall\\process.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\models\\kafkaoutcall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\models\\kafkaoutcall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\models\\crmusersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\models\\crmusersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\viewmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\viewmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{BF01D658-5BD0-48BD-BE20-79E6ADACC5D6}|Shared.Common\\Shared.Common.shproj|solutionrelative:shared.common\\crmconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\services\\kafka\\ikafkacallsreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\services\\kafka\\ikafkacallsreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,28 +75,12 @@
       "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\services\\cache\\cacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0717C511-BC64-4B2C-AEAB-889A0E1DC304}|PhoneCallWriterWinService\\PhoneCallWriterWinService.csproj|c:\\users\\user\\source\\repos\\callcentercore\\phonecallwriterwinservice\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{0717C511-BC64-4B2C-AEAB-889A0E1DC304}|PhoneCallWriterWinService\\PhoneCallWriterWinService.csproj|solutionrelative:phonecallwriterwinservice\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\viewmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\viewmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0717C511-BC64-4B2C-AEAB-889A0E1DC304}|PhoneCallWriterWinService\\PhoneCallWriterWinService.csproj|c:\\users\\user\\source\\repos\\callcentercore\\phonecallwriterwinservice\\winservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0717C511-BC64-4B2C-AEAB-889A0E1DC304}|PhoneCallWriterWinService\\PhoneCallWriterWinService.csproj|solutionrelative:phonecallwriterwinservice\\winservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|solutionrelative:callopetatorwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2603D311-ACED-49E9-9D99-00C1F2F97B79}|CallOpetatorWebApp\\CallOpetatorWebApp.csproj|c:\\users\\user\\source\\repos\\callcentercore\\callopetatorwebapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -150,35 +158,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\App.config",
-              "RelativeDocumentMoniker": "PhoneCallWriterWinService\\App.config",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\App.config",
-              "RelativeToolTip": "PhoneCallWriterWinService\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-06-22T04:37:48.197Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MsgConverter.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
-              "RelativeDocumentMoniker": "PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
-              "RelativeToolTip": "PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T04:14:16.681Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -187,9 +168,22 @@
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\OutCall\\Process.cshtml",
               "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\OutCall\\Process.cshtml",
               "RelativeToolTip": "CallOpetatorWebApp\\Views\\OutCall\\Process.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-23T03:56:15.603Z",
+              "WhenOpened": "2025-06-23T04:50:31.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CrmUserSession.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Models\\CrmUserSession.cs",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Models\\CrmUserSession.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Models\\CrmUserSession.cs",
+              "RelativeToolTip": "CallOpetatorWebApp\\Models\\CrmUserSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T04:18:13.251Z",
               "EditorCaption": ""
             },
             {
@@ -200,40 +194,14 @@
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Controllers\\OutCallController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Controllers\\OutCallController.cs",
               "RelativeToolTip": "CallOpetatorWebApp\\Controllers\\OutCallController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAYwF8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwCQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T03:17:26.481Z",
+              "WhenOpened": "2025-06-23T04:44:21.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CrmConnector.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\Shared.Common\\CrmConnector.cs",
-              "RelativeDocumentMoniker": "Shared.Common\\CrmConnector.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\Shared.Common\\CrmConnector.cs",
-              "RelativeToolTip": "Shared.Common\\CrmConnector.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAmwCcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T01:51:23.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Program.cs",
-              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Program.cs",
-              "RelativeToolTip": "CallOpetatorWebApp\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T02:47:12.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "CrmDbWorker.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\DB\\CRM\\CrmDbWorker.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\DB\\CRM\\CrmDbWorker.cs",
@@ -246,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\GenerateCallClientsDataConsole\\Program.cs",
               "RelativeDocumentMoniker": "GenerateCallClientsDataConsole\\Program.cs",
@@ -259,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "CrmService.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Crm\\CrmService.cs",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Services\\Crm\\CrmService.cs",
@@ -272,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Controllers\\LoginController.cs",
@@ -285,20 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\appsettings.json",
-              "RelativeDocumentMoniker": "CallOpetatorWebApp\\appsettings.json",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\appsettings.json",
-              "RelativeToolTip": "CallOpetatorWebApp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-23T02:12:23.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\ViewModels\\LoginModel.cs",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\ViewModels\\LoginModel.cs",
@@ -311,33 +266,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KafkaOutCall.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Models\\KafkaOutCall.cs",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Models\\KafkaOutCall.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Models\\KafkaOutCall.cs",
+              "RelativeToolTip": "CallOpetatorWebApp\\Models\\KafkaOutCall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T04:33:35.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Program.cs",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Program.cs",
+              "RelativeToolTip": "CallOpetatorWebApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T02:47:12.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IKafkaCallsReader.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
-              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
-              "RelativeToolTip": "CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T03:42:13.152Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T02:23:28.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CacheService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
-              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
-              "RelativeToolTip": "CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T03:26:50.021Z",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "CallOpetatorWebApp\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T04:35:16.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml.css",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml.css",
@@ -350,7 +331,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CrmConnector.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\Shared.Common\\CrmConnector.cs",
+              "RelativeDocumentMoniker": "Shared.Common\\CrmConnector.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\Shared.Common\\CrmConnector.cs",
+              "RelativeToolTip": "Shared.Common\\CrmConnector.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwCcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T01:51:23.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MsgConverter.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
+              "RelativeDocumentMoniker": "PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
+              "RelativeToolTip": "PhoneCallWriterWinService\\Kafka\\MsgConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T04:14:16.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\appsettings.json",
+              "RelativeToolTip": "CallOpetatorWebApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-23T02:12:23.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IKafkaCallsReader.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
+              "RelativeToolTip": "CallOpetatorWebApp\\Services\\Kafka\\IKafkaCallsReader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T03:42:13.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CacheService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
+              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
+              "RelativeToolTip": "CallOpetatorWebApp\\Services\\Cache\\CacheService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T03:26:50.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -363,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "WinService.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\WinService.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\WinService.cs",
@@ -376,20 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CallOpetatorWebApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-23T02:23:28.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\_ViewStart.cshtml",
@@ -402,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Views\\_ViewImports.cshtml",
@@ -415,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "KafkaProducer.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\Kafka\\KafkaProducer.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\Kafka\\KafkaProducer.cs",
@@ -428,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\Program.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\Program.cs",
@@ -441,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\CallOpetatorWebApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CallOpetatorWebApp\\Properties\\launchSettings.json",
@@ -454,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\packages.config",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\packages.config",
@@ -467,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "CrmTest.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\GenerateCallClientsDataConsole.UnitTests\\CrmTest.cs",
               "RelativeDocumentMoniker": "GenerateCallClientsDataConsole.UnitTests\\CrmTest.cs",
@@ -480,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "WinService.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\WinService.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\WinService.cs",
@@ -492,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\readme.txt",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\readme.txt",
@@ -505,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "WinService.Designer.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\WinService.Designer.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\WinService.Designer.cs",
@@ -518,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "MainInstaller.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\MainInstaller.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\MainInstaller.cs",
@@ -530,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "MainInstaller.Designer.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\MainInstaller.Designer.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\MainInstaller.Designer.cs",
@@ -543,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "MainInstaller.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\MainInstaller.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\MainInstaller.cs",
@@ -556,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "CallClientsEntity.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\DB\\CRM\\Models\\CallClientsEntity.cs",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\DB\\CRM\\Models\\CallClientsEntity.cs",
@@ -569,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "NLog.config",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\NLog.config",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\NLog.config",
@@ -582,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\GenerateCallClientsDataConsole\\readme.txt",
               "RelativeDocumentMoniker": "GenerateCallClientsDataConsole\\readme.txt",
@@ -595,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "NLog.config",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\CallCenterCore\\PhoneCallWriterWinService\\NLog.config",
               "RelativeDocumentMoniker": "PhoneCallWriterWinService\\NLog.config",

@@ -1,6 +1,6 @@
-﻿namespace CallOpetatorWebApp.ViewModels
+﻿namespace CallOpetatorWebApp.Models
 {
-    public class OutCall
+    public class KafkaOutCall
     {
         public Guid CallClientsEntityId { get; set; }
         public string Welcome { get; set; }
