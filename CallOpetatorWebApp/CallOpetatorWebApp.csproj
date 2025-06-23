@@ -10,6 +10,16 @@
   <Import Project="..\Shared.Common\Shared.Common.projitems" Label="Shared" />
 
   <ItemGroup>
+    <Content Remove="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Confluent.Kafka" Version="2.10.1" />
     <PackageReference Include="Data8.PowerPlatform.Dataverse.Client" Version="2.4.2" />
     <PackageReference Include="NLog" Version="6.0.0" />

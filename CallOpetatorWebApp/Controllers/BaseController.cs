@@ -6,7 +6,8 @@ using NLog;
 
 namespace CallOpetatorWebApp.Controllers
 {
-    public class BaseController : Controller
+    [ApiController]
+    public abstract class BaseController : Controller
     {
         protected ICrmService _crmService;
         protected ICacheService _cacheService;
@@ -25,7 +26,7 @@ namespace CallOpetatorWebApp.Controllers
         /// <summary>
         /// Логировать ошибки, для тестов сделал
         /// </summary>
-        public IActionResult WrapperExecute(Func<IActionResult> method)
+        protected IActionResult WrapperExecute(Func<IActionResult> method)
         {
             try
             {
