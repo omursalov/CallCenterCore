@@ -1,4 +1,3 @@
-C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\appsettings.json
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.staticwebassets.runtime.json
 C:\Users\user\source\repos\CallCenterCore\CallOpetatorWebApp\bin\Debug\net8.0\CallOpetatorWebApp.exe
