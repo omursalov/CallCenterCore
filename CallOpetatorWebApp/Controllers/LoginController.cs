@@ -12,7 +12,7 @@ namespace CallOpetatorWebApp.Controllers
         private ICrmService _crmService;
         private ICacheService _cacheService;
 
-        public LoginController(ICrmService crmService, ICacheService cacheService)
+        public LoginController(ICrmService crmService, ICacheService cacheService, IConfiguration configuration)
         {
             _crmService = crmService;
             _cacheService = cacheService;
@@ -43,7 +43,13 @@ namespace CallOpetatorWebApp.Controllers
                     NoLock = true
                 }).Entities.ToList());
 
-            return View("УСПЕХ");
+            if (!string.IsNullOrWhiteSpace(loginModel.UserDomainName)
+                && users.Any(x => x["domainname"].ToString().ToLower() == loginModel.UserDomainName.ToLower()))
+            {
+                return Redirect("~/OutCall/Process");
+            }
+
+            return View();
         }
     }
 }
