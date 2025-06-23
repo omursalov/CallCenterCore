@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CallOpetatorWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f7859dfb5f1e5cd20e684dace9c1eb755a2f019")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8392b8bafb49a4890e6e0ddb445385ff01670409")]
 [assembly: System.Reflection.AssemblyProductAttribute("CallOpetatorWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CallOpetatorWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

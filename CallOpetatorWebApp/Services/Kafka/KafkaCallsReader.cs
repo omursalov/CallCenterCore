@@ -22,22 +22,27 @@ namespace CallOpetatorWebApp.Services.Kafka
             _consumer = new ConsumerBuilder<Null, string>(new ConsumerConfig
             {
                 BootstrapServers = configuration["Kafka:BootstrapServers"],
-                GroupId = "console-consumer-81101",
+                GroupId = configuration["Kafka:GroupId"],
                 AutoOffsetReset = AutoOffsetReset.Earliest
             }).Build();
             _consumer.Subscribe(configuration["Kafka:TopicName"]);
         }
 
+        /// <summary>
+        /// Может вернуть NULL (нет звонков в Kafka, кончились)
+        /// </summary>
+        /// <returns></returns>
         public KafkaOutCall Next()
         {
             ConsumeResult<Null, string> result = null;
 
             lock (_lockObj)
             {
-                result = _consumer.Consume();
+                var TIMEOUT_SEC = 5;
+                result = _consumer.Consume(TimeSpan.FromSeconds(TIMEOUT_SEC));
             }
             
-            return JsonConvert.DeserializeObject<KafkaOutCall>(result.Message.Value);
+            return result != null ? JsonConvert.DeserializeObject<KafkaOutCall>(result.Message.Value) : null;
         }
 
         public void Dispose() => _consumer.Dispose();

@@ -57,9 +57,13 @@ namespace CallOpetatorWebApp.Controllers
                 });
             }
 
+            var kafkaCall = _kafkaCallsReader.Next();
+            if (kafkaCall == null)
+                return Redirect("~/End/Index");
+
             var newCall = new OutCallModel
             {
-                OutCall = _kafkaCallsReader.Next()
+                OutCall = kafkaCall
             };
             // Где-то здесь будет интеграция с API телефонией, например..
 
